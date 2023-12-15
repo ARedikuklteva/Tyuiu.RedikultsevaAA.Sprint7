@@ -7,8 +7,9 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Valid()
         {
+
         }
     }
 }
