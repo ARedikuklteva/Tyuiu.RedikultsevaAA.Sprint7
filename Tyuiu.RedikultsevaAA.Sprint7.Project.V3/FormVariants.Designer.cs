@@ -30,95 +30,154 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.labelSearch_RAA = new System.Windows.Forms.Label();
-            this.buttonFirst_RAA = new System.Windows.Forms.Button();
-            this.buttonSecond_RAA = new System.Windows.Forms.Button();
-            this.buttonThird_RAA = new System.Windows.Forms.Button();
             this.toolTip_RAA = new System.Windows.Forms.ToolTip(this.components);
+            this.buttonReadFile_RAA = new System.Windows.Forms.Button();
+            this.buttonSortAlph_RAA = new System.Windows.Forms.Button();
+            this.buttonSortKafedra_RAA = new System.Windows.Forms.Button();
+            this.buttonSortBySubject_RAA = new System.Windows.Forms.Button();
+            this.buttonSaveFile_RAA = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView_RAA = new System.Windows.Forms.DataGridView();
+            this.labelOut_RAA = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_RAA)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelSearch_RAA
-            // 
-            this.labelSearch_RAA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelSearch_RAA.AutoSize = true;
-            this.labelSearch_RAA.ForeColor = System.Drawing.Color.Sienna;
-            this.labelSearch_RAA.Location = new System.Drawing.Point(28, 19);
-            this.labelSearch_RAA.Name = "labelSearch_RAA";
-            this.labelSearch_RAA.Size = new System.Drawing.Size(230, 34);
-            this.labelSearch_RAA.TabIndex = 0;
-            this.labelSearch_RAA.Text = "Варианты поиска преподователя\r\n\r\n";
-            // 
-            // buttonFirst_RAA
-            // 
-            this.buttonFirst_RAA.BackColor = System.Drawing.Color.SandyBrown;
-            this.buttonFirst_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonFirst_RAA.ForeColor = System.Drawing.Color.Sienna;
-            this.buttonFirst_RAA.Location = new System.Drawing.Point(12, 66);
-            this.buttonFirst_RAA.Name = "buttonFirst_RAA";
-            this.buttonFirst_RAA.Size = new System.Drawing.Size(110, 50);
-            this.buttonFirst_RAA.TabIndex = 1;
-            this.buttonFirst_RAA.Text = "По кафедре";
-            this.toolTip_RAA.SetToolTip(this.buttonFirst_RAA, "Поиск преподователя по кафедре, \r\nк которой он(а) относятся");
-            this.buttonFirst_RAA.UseVisualStyleBackColor = false;
-            this.buttonFirst_RAA.Click += new System.EventHandler(this.buttonFirst_RAA_Click);
-            // 
-            // buttonSecond_RAA
-            // 
-            this.buttonSecond_RAA.BackColor = System.Drawing.Color.SandyBrown;
-            this.buttonSecond_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSecond_RAA.ForeColor = System.Drawing.Color.Sienna;
-            this.buttonSecond_RAA.Location = new System.Drawing.Point(128, 66);
-            this.buttonSecond_RAA.Name = "buttonSecond_RAA";
-            this.buttonSecond_RAA.Size = new System.Drawing.Size(110, 50);
-            this.buttonSecond_RAA.TabIndex = 1;
-            this.buttonSecond_RAA.Text = "По предмету";
-            this.toolTip_RAA.SetToolTip(this.buttonSecond_RAA, "Поиск преподователя по предмету, \r\nкоторый он(а) преподает\r\n");
-            this.buttonSecond_RAA.UseVisualStyleBackColor = false;
-            this.buttonSecond_RAA.Click += new System.EventHandler(this.buttonSecond_RAA_Click);
-            // 
-            // buttonThird_RAA
-            // 
-            this.buttonThird_RAA.BackColor = System.Drawing.Color.SandyBrown;
-            this.buttonThird_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThird_RAA.ForeColor = System.Drawing.Color.Sienna;
-            this.buttonThird_RAA.Location = new System.Drawing.Point(244, 66);
-            this.buttonThird_RAA.Name = "buttonThird_RAA";
-            this.buttonThird_RAA.Size = new System.Drawing.Size(110, 50);
-            this.buttonThird_RAA.TabIndex = 1;
-            this.buttonThird_RAA.Text = "По ФИО";
-            this.toolTip_RAA.SetToolTip(this.buttonThird_RAA, "Поиск преподователя по их ФИО\r\n\r\n");
-            this.buttonThird_RAA.UseVisualStyleBackColor = false;
-            this.buttonThird_RAA.Click += new System.EventHandler(this.buttonThird_RAA_Click);
             // 
             // toolTip_RAA
             // 
             this.toolTip_RAA.ToolTipTitle = "Подсказка";
+            // 
+            // buttonReadFile_RAA
+            // 
+            this.buttonReadFile_RAA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(130)))));
+            this.buttonReadFile_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReadFile_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.buttonReadFile_RAA.Location = new System.Drawing.Point(27, 12);
+            this.buttonReadFile_RAA.Name = "buttonReadFile_RAA";
+            this.buttonReadFile_RAA.Size = new System.Drawing.Size(120, 59);
+            this.buttonReadFile_RAA.TabIndex = 1;
+            this.buttonReadFile_RAA.Text = "READ FILE";
+            this.toolTip_RAA.SetToolTip(this.buttonReadFile_RAA, "Прочитать файл");
+            this.buttonReadFile_RAA.UseVisualStyleBackColor = false;
+            // 
+            // buttonSortAlph_RAA
+            // 
+            this.buttonSortAlph_RAA.BackColor = System.Drawing.Color.Bisque;
+            this.buttonSortAlph_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSortAlph_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.buttonSortAlph_RAA.Location = new System.Drawing.Point(27, 171);
+            this.buttonSortAlph_RAA.Name = "buttonSortAlph_RAA";
+            this.buttonSortAlph_RAA.Size = new System.Drawing.Size(120, 59);
+            this.buttonSortAlph_RAA.TabIndex = 1;
+            this.buttonSortAlph_RAA.Text = "Сортировка по алфовиту";
+            this.toolTip_RAA.SetToolTip(this.buttonSortAlph_RAA, "Отсортировать таблицу по алфовиту");
+            this.buttonSortAlph_RAA.UseVisualStyleBackColor = false;
+            // 
+            // buttonSortKafedra_RAA
+            // 
+            this.buttonSortKafedra_RAA.BackColor = System.Drawing.Color.Bisque;
+            this.buttonSortKafedra_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSortKafedra_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.buttonSortKafedra_RAA.Location = new System.Drawing.Point(27, 261);
+            this.buttonSortKafedra_RAA.Name = "buttonSortKafedra_RAA";
+            this.buttonSortKafedra_RAA.Size = new System.Drawing.Size(120, 61);
+            this.buttonSortKafedra_RAA.TabIndex = 1;
+            this.buttonSortKafedra_RAA.Text = "Сортировка по кафедре";
+            this.toolTip_RAA.SetToolTip(this.buttonSortKafedra_RAA, "Отсортировать таблицу по кафедре, к которой относится преподователь");
+            this.buttonSortKafedra_RAA.UseVisualStyleBackColor = false;
+            // 
+            // buttonSortBySubject_RAA
+            // 
+            this.buttonSortBySubject_RAA.BackColor = System.Drawing.Color.Bisque;
+            this.buttonSortBySubject_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSortBySubject_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.buttonSortBySubject_RAA.Location = new System.Drawing.Point(27, 350);
+            this.buttonSortBySubject_RAA.Name = "buttonSortBySubject_RAA";
+            this.buttonSortBySubject_RAA.Size = new System.Drawing.Size(120, 59);
+            this.buttonSortBySubject_RAA.TabIndex = 1;
+            this.buttonSortBySubject_RAA.Text = "Сортировка по разделу";
+            this.toolTip_RAA.SetToolTip(this.buttonSortBySubject_RAA, "Отсортировать таблицу по разделу предмета, которому учит преподаватель");
+            this.buttonSortBySubject_RAA.UseVisualStyleBackColor = false;
+            // 
+            // buttonSaveFile_RAA
+            // 
+            this.buttonSaveFile_RAA.BackColor = System.Drawing.Color.Bisque;
+            this.buttonSaveFile_RAA.Enabled = false;
+            this.buttonSaveFile_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveFile_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.buttonSaveFile_RAA.Location = new System.Drawing.Point(1050, 12);
+            this.buttonSaveFile_RAA.Name = "buttonSaveFile_RAA";
+            this.buttonSaveFile_RAA.Size = new System.Drawing.Size(120, 59);
+            this.buttonSaveFile_RAA.TabIndex = 1;
+            this.buttonSaveFile_RAA.Text = "SAVE FILE";
+            this.toolTip_RAA.SetToolTip(this.buttonSaveFile_RAA, "Сохранить файл");
+            this.buttonSaveFile_RAA.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Bisque;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.textBox1.Location = new System.Drawing.Point(562, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(422, 22);
+            this.textBox1.TabIndex = 3;
+            this.toolTip_RAA.SetToolTip(this.textBox1, "Введите полноние ФИО преподователя, чтобы сохранить в файл");
+            // 
+            // dataGridView_RAA
+            // 
+            this.dataGridView_RAA.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(130)))));
+            this.dataGridView_RAA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_RAA.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(130)))));
+            this.dataGridView_RAA.Location = new System.Drawing.Point(185, 98);
+            this.dataGridView_RAA.Name = "dataGridView_RAA";
+            this.dataGridView_RAA.RowHeadersWidth = 51;
+            this.dataGridView_RAA.RowTemplate.Height = 24;
+            this.dataGridView_RAA.Size = new System.Drawing.Size(994, 552);
+            this.dataGridView_RAA.TabIndex = 0;
+            // 
+            // labelOut_RAA
+            // 
+            this.labelOut_RAA.AutoSize = true;
+            this.labelOut_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.labelOut_RAA.Location = new System.Drawing.Point(559, 12);
+            this.labelOut_RAA.Name = "labelOut_RAA";
+            this.labelOut_RAA.Size = new System.Drawing.Size(425, 17);
+            this.labelOut_RAA.TabIndex = 2;
+            this.labelOut_RAA.Text = "Чтобы сохранить в файл введите полное ФИО преподователя";
             // 
             // FormVariants
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(368, 133);
-            this.Controls.Add(this.buttonThird_RAA);
-            this.Controls.Add(this.buttonSecond_RAA);
-            this.Controls.Add(this.buttonFirst_RAA);
-            this.Controls.Add(this.labelSearch_RAA);
+            this.ClientSize = new System.Drawing.Size(1182, 653);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labelOut_RAA);
+            this.Controls.Add(this.buttonSortBySubject_RAA);
+            this.Controls.Add(this.buttonSortKafedra_RAA);
+            this.Controls.Add(this.buttonSortAlph_RAA);
+            this.Controls.Add(this.buttonSaveFile_RAA);
+            this.Controls.Add(this.buttonReadFile_RAA);
+            this.Controls.Add(this.dataGridView_RAA);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormVariants";
-            this.Text = "Как ищем преподователя?";
+            this.Text = "Ищем преподователя";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_RAA)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelSearch_RAA;
-        private System.Windows.Forms.Button buttonFirst_RAA;
-        private System.Windows.Forms.Button buttonSecond_RAA;
-        private System.Windows.Forms.Button buttonThird_RAA;
         private System.Windows.Forms.ToolTip toolTip_RAA;
+        private System.Windows.Forms.DataGridView dataGridView_RAA;
+        private System.Windows.Forms.Button buttonReadFile_RAA;
+        private System.Windows.Forms.Button buttonSortAlph_RAA;
+        private System.Windows.Forms.Button buttonSortKafedra_RAA;
+        private System.Windows.Forms.Button buttonSortBySubject_RAA;
+        private System.Windows.Forms.Button buttonSaveFile_RAA;
+        private System.Windows.Forms.Label labelOut_RAA;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

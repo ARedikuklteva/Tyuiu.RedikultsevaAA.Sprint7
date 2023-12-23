@@ -58,7 +58,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             // 
             // buttonOK_RAA
             // 
-            this.buttonOK_RAA.BackColor = System.Drawing.Color.SandyBrown;
+            this.buttonOK_RAA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(130)))));
             this.buttonOK_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOK_RAA.ForeColor = System.Drawing.Color.Sienna;
             this.buttonOK_RAA.Location = new System.Drawing.Point(512, 184);
@@ -73,7 +73,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(568, 222);
             this.Controls.Add(this.buttonOK_RAA);
             this.Controls.Add(this.labelAbout_RAA);
