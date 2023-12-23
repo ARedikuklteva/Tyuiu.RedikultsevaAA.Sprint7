@@ -107,5 +107,11 @@
   <ItemGroup>
     <None Include="Resources\photo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.RedikultsevaAA.Sprint7.Project.V3.Lib\Tyuiu.RedikultsevaAA.Sprint7.Project.V3.Lib.csproj">
+      <Project>{f3e2ccaf-ead9-4a4d-9325-627c17a18cf2}</Project>
+      <Name>Tyuiu.RedikultsevaAA.Sprint7.Project.V3.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

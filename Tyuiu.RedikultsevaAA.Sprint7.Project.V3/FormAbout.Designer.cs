@@ -79,7 +79,9 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.Controls.Add(this.labelAbout_RAA);
             this.Controls.Add(this.pictureBoxAvatar_RAA);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(586, 269);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(586, 269);
             this.Name = "FormAbout";
             this.Text = "О программе";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar_RAA)).EndInit();
