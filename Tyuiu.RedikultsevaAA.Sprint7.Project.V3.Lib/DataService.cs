@@ -14,7 +14,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3.Lib
         {
             int rows = array.GetUpperBound(0) + 1;
             int columns = array.Length / rows;
-            string[,] matrix = new string[rows,columns];
+            string[,] matrix = new string[rows, columns];
 
             string[] mas2 = new string[rows];
 
@@ -25,7 +25,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3.Lib
 
             IEnumerable<string> sortAscendingQuery =
             from mas in mas2
-            orderby mas 
+            orderby mas
             select mas;
 
             int c = 0;
@@ -36,20 +36,30 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3.Lib
             }
 
             int count = 0;
-            while (count != rows-1)
+            while (count != rows - 1)
             {
                 for (int i = 0; i < rows; i++)
                 {
+                    if(mas2[count] == "ФИО")
+                    {
+                        count++;
+                        break;
+                    }
                     if (mas2[count] == array[i, 1])
                     {
+                        count++;
                         for (int j = 0; j < columns; j++)
                         {
                             matrix[count, j] = array[i, j];
                         }
-                        count++;
                         break;
                     }
                 }
+            }
+
+            for(int j = 0; j < columns; j++)
+            {
+                matrix[0,j] = array[0, j];
             }
 
             return matrix;
