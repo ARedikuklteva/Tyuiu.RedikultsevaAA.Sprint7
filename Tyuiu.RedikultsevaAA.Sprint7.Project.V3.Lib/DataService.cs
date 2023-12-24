@@ -116,5 +116,30 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3.Lib
             }
             return matrix;
         }
+
+        public string[,] Search(string num, string[,] array)
+        {
+            int rows = array.GetUpperBound(0) + 1;
+            int columns = array.GetUpperBound(1) + 1;
+            string[,] matrix = new string[rows, columns];
+
+            for (int j = 0; j < columns; j++)
+            {
+                matrix[0, j] = array[0, j];
+            }
+
+            int count = 1;
+            for (int i = 1; i < rows; i++)
+            {
+                if (array[i, 1] == num)
+                {
+                    for (int j = 0; j < columns; j++)
+                    {
+                        matrix[count, j] = array[i, j];
+                    }
+                }
+            }
+            return matrix;
+        }
     }
 }

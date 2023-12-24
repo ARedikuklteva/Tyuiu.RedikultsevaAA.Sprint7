@@ -63,16 +63,6 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Icon_Unv {
-            get {
-                object obj = ResourceManager.GetObject("Icon_Unv", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap photo {
             get {
                 object obj = ResourceManager.GetObject("photo", resourceCulture);

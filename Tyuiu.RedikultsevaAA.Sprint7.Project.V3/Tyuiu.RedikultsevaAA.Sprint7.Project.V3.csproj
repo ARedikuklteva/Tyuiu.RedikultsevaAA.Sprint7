@@ -99,9 +99,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Icon_Unv.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\photo_University.jpg" />
   </ItemGroup>
   <ItemGroup>

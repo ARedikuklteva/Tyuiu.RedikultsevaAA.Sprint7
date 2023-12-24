@@ -104,7 +104,9 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.Controls.Add(this.buttonHelp_RAA);
             this.Controls.Add(this.pictureBoxImageUniversity_RAA);
             this.Controls.Add(this.labelUni_RAA);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(920, 600);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(920, 600);
             this.Name = "FormMain";
             this.Text = "FormMain";
