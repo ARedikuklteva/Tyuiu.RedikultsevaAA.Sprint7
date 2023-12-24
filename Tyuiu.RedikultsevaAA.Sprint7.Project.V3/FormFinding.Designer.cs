@@ -1,7 +1,7 @@
 ﻿
 namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
 {
-    partial class FormVariants
+    partial class FormFinding
     {
         /// <summary>
         /// Required designer variable.
@@ -33,14 +33,16 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.toolTip_RAA = new System.Windows.Forms.ToolTip(this.components);
             this.buttonReadFile_RAA = new System.Windows.Forms.Button();
             this.buttonSortAlph_RAA = new System.Windows.Forms.Button();
-            this.buttonSortKafedra_RAA = new System.Windows.Forms.Button();
-            this.buttonSortBySubject_RAA = new System.Windows.Forms.Button();
+            this.buttonFiltrKafedra_RAA = new System.Windows.Forms.Button();
+            this.buttonFiltrBySubject_RAA = new System.Windows.Forms.Button();
             this.buttonSaveFile_RAA = new System.Windows.Forms.Button();
             this.dataGridView_RAA = new System.Windows.Forms.DataGridView();
             this.openFileDialog_RAA = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog_RAA = new System.Windows.Forms.SaveFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelFiltrKaf_RAA = new System.Windows.Forms.Label();
+            this.labelFiltrRazd_RAA = new System.Windows.Forms.Label();
+            this.textBoxFiltr_RAA = new System.Windows.Forms.TextBox();
+            this.textBoxFiltrRazd_RAA = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_RAA)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,9 +67,10 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             // buttonSortAlph_RAA
             // 
             this.buttonSortAlph_RAA.BackColor = System.Drawing.Color.Bisque;
+            this.buttonSortAlph_RAA.Enabled = false;
             this.buttonSortAlph_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSortAlph_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.buttonSortAlph_RAA.Location = new System.Drawing.Point(27, 171);
+            this.buttonSortAlph_RAA.Location = new System.Drawing.Point(27, 124);
             this.buttonSortAlph_RAA.Name = "buttonSortAlph_RAA";
             this.buttonSortAlph_RAA.Size = new System.Drawing.Size(120, 59);
             this.buttonSortAlph_RAA.TabIndex = 1;
@@ -76,37 +79,40 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.buttonSortAlph_RAA.UseVisualStyleBackColor = false;
             this.buttonSortAlph_RAA.Click += new System.EventHandler(this.buttonSortAlph_RAA_Click);
             // 
-            // buttonSortKafedra_RAA
+            // buttonFiltrKafedra_RAA
             // 
-            this.buttonSortKafedra_RAA.BackColor = System.Drawing.Color.Bisque;
-            this.buttonSortKafedra_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSortKafedra_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.buttonSortKafedra_RAA.Location = new System.Drawing.Point(27, 309);
-            this.buttonSortKafedra_RAA.Name = "buttonSortKafedra_RAA";
-            this.buttonSortKafedra_RAA.Size = new System.Drawing.Size(120, 61);
-            this.buttonSortKafedra_RAA.TabIndex = 1;
-            this.buttonSortKafedra_RAA.Text = "Сортировка по кафедре";
-            this.toolTip_RAA.SetToolTip(this.buttonSortKafedra_RAA, "Отсортировать таблицу по кафедре, к которой относится преподователь");
-            this.buttonSortKafedra_RAA.UseVisualStyleBackColor = false;
-            this.buttonSortKafedra_RAA.Click += new System.EventHandler(this.buttonSortKafedra_RAA_Click);
+            this.buttonFiltrKafedra_RAA.BackColor = System.Drawing.Color.Bisque;
+            this.buttonFiltrKafedra_RAA.Enabled = false;
+            this.buttonFiltrKafedra_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFiltrKafedra_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.buttonFiltrKafedra_RAA.Location = new System.Drawing.Point(27, 318);
+            this.buttonFiltrKafedra_RAA.Name = "buttonFiltrKafedra_RAA";
+            this.buttonFiltrKafedra_RAA.Size = new System.Drawing.Size(120, 61);
+            this.buttonFiltrKafedra_RAA.TabIndex = 1;
+            this.buttonFiltrKafedra_RAA.Text = "Фильтрация по кафедре";
+            this.toolTip_RAA.SetToolTip(this.buttonFiltrKafedra_RAA, "Отфильтровать таблицу по кафедре, \r\nк которой относится преподователь");
+            this.buttonFiltrKafedra_RAA.UseVisualStyleBackColor = false;
+            this.buttonFiltrKafedra_RAA.Click += new System.EventHandler(this.buttonFiltrKafedra_RAA_Click);
             // 
-            // buttonSortBySubject_RAA
+            // buttonFiltrBySubject_RAA
             // 
-            this.buttonSortBySubject_RAA.BackColor = System.Drawing.Color.Bisque;
-            this.buttonSortBySubject_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSortBySubject_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.buttonSortBySubject_RAA.Location = new System.Drawing.Point(27, 452);
-            this.buttonSortBySubject_RAA.Name = "buttonSortBySubject_RAA";
-            this.buttonSortBySubject_RAA.Size = new System.Drawing.Size(120, 61);
-            this.buttonSortBySubject_RAA.TabIndex = 1;
-            this.buttonSortBySubject_RAA.Text = "Сортировка по разделу";
-            this.toolTip_RAA.SetToolTip(this.buttonSortBySubject_RAA, "Отсортировать таблицу по разделу предмета, которому учит преподаватель");
-            this.buttonSortBySubject_RAA.UseVisualStyleBackColor = false;
-            this.buttonSortBySubject_RAA.Click += new System.EventHandler(this.buttonSortBySubject_RAA_Click);
+            this.buttonFiltrBySubject_RAA.BackColor = System.Drawing.Color.Bisque;
+            this.buttonFiltrBySubject_RAA.Enabled = false;
+            this.buttonFiltrBySubject_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFiltrBySubject_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.buttonFiltrBySubject_RAA.Location = new System.Drawing.Point(27, 506);
+            this.buttonFiltrBySubject_RAA.Name = "buttonFiltrBySubject_RAA";
+            this.buttonFiltrBySubject_RAA.Size = new System.Drawing.Size(120, 61);
+            this.buttonFiltrBySubject_RAA.TabIndex = 1;
+            this.buttonFiltrBySubject_RAA.Text = "Фильтрация по разделу";
+            this.toolTip_RAA.SetToolTip(this.buttonFiltrBySubject_RAA, "Отсфильтровать таблицу по разделу предмета, \r\nкоторому учит преподаватель");
+            this.buttonFiltrBySubject_RAA.UseVisualStyleBackColor = false;
+            this.buttonFiltrBySubject_RAA.Click += new System.EventHandler(this.buttonFiltrBySubject_RAA_Click);
             // 
             // buttonSaveFile_RAA
             // 
             this.buttonSaveFile_RAA.BackColor = System.Drawing.Color.Bisque;
+            this.buttonSaveFile_RAA.Enabled = false;
             this.buttonSaveFile_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaveFile_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
             this.buttonSaveFile_RAA.Location = new System.Drawing.Point(1050, 12);
@@ -136,34 +142,58 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             // 
             this.openFileDialog_RAA.FileName = "openFileDialog1";
             // 
-            // label1
+            // labelFiltrKaf_RAA
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 279);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.labelFiltrKaf_RAA.AutoSize = true;
+            this.labelFiltrKaf_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.labelFiltrKaf_RAA.Location = new System.Drawing.Point(25, 253);
+            this.labelFiltrKaf_RAA.Name = "labelFiltrKaf_RAA";
+            this.labelFiltrKaf_RAA.Size = new System.Drawing.Size(133, 34);
+            this.labelFiltrKaf_RAA.TabIndex = 2;
+            this.labelFiltrKaf_RAA.Text = "Введите название \r\n        кафедры";
             // 
-            // label2
+            // labelFiltrRazd_RAA
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 422);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label1";
+            this.labelFiltrRazd_RAA.AutoSize = true;
+            this.labelFiltrRazd_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.labelFiltrRazd_RAA.Location = new System.Drawing.Point(25, 441);
+            this.labelFiltrRazd_RAA.Name = "labelFiltrRazd_RAA";
+            this.labelFiltrRazd_RAA.Size = new System.Drawing.Size(129, 34);
+            this.labelFiltrRazd_RAA.TabIndex = 2;
+            this.labelFiltrRazd_RAA.Text = "Введите название\r\n         раздела";
             // 
-            // FormVariants
+            // textBoxFiltr_RAA
+            // 
+            this.textBoxFiltr_RAA.BackColor = System.Drawing.Color.White;
+            this.textBoxFiltr_RAA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxFiltr_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.textBoxFiltr_RAA.Location = new System.Drawing.Point(27, 290);
+            this.textBoxFiltr_RAA.Name = "textBoxFiltr_RAA";
+            this.textBoxFiltr_RAA.Size = new System.Drawing.Size(120, 22);
+            this.textBoxFiltr_RAA.TabIndex = 3;
+            // 
+            // textBoxFiltrRazd_RAA
+            // 
+            this.textBoxFiltrRazd_RAA.BackColor = System.Drawing.Color.White;
+            this.textBoxFiltrRazd_RAA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxFiltrRazd_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.textBoxFiltrRazd_RAA.Location = new System.Drawing.Point(28, 478);
+            this.textBoxFiltrRazd_RAA.Name = "textBoxFiltrRazd_RAA";
+            this.textBoxFiltrRazd_RAA.Size = new System.Drawing.Size(120, 22);
+            this.textBoxFiltrRazd_RAA.TabIndex = 3;
+            // 
+            // FormFinding
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1182, 653);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonSortBySubject_RAA);
-            this.Controls.Add(this.buttonSortKafedra_RAA);
+            this.Controls.Add(this.textBoxFiltrRazd_RAA);
+            this.Controls.Add(this.textBoxFiltr_RAA);
+            this.Controls.Add(this.labelFiltrRazd_RAA);
+            this.Controls.Add(this.labelFiltrKaf_RAA);
+            this.Controls.Add(this.buttonFiltrBySubject_RAA);
+            this.Controls.Add(this.buttonFiltrKafedra_RAA);
             this.Controls.Add(this.buttonSortAlph_RAA);
             this.Controls.Add(this.buttonSaveFile_RAA);
             this.Controls.Add(this.buttonReadFile_RAA);
@@ -172,7 +202,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.MaximumSize = new System.Drawing.Size(1200, 700);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1200, 700);
-            this.Name = "FormVariants";
+            this.Name = "FormFinding";
             this.Text = "Ищем преподователя";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_RAA)).EndInit();
             this.ResumeLayout(false);
@@ -185,12 +215,14 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
         private System.Windows.Forms.DataGridView dataGridView_RAA;
         private System.Windows.Forms.Button buttonReadFile_RAA;
         private System.Windows.Forms.Button buttonSortAlph_RAA;
-        private System.Windows.Forms.Button buttonSortKafedra_RAA;
-        private System.Windows.Forms.Button buttonSortBySubject_RAA;
+        private System.Windows.Forms.Button buttonFiltrKafedra_RAA;
+        private System.Windows.Forms.Button buttonFiltrBySubject_RAA;
         private System.Windows.Forms.Button buttonSaveFile_RAA;
         private System.Windows.Forms.OpenFileDialog openFileDialog_RAA;
         private System.Windows.Forms.SaveFileDialog saveFileDialog_RAA;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelFiltrKaf_RAA;
+        private System.Windows.Forms.Label labelFiltrRazd_RAA;
+        private System.Windows.Forms.TextBox textBoxFiltr_RAA;
+        private System.Windows.Forms.TextBox textBoxFiltrRazd_RAA;
     }
 }

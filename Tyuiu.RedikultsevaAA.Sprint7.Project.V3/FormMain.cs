@@ -28,7 +28,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
 
         private void buttonSearch_RAA_Click(object sender, EventArgs e)
         {
-            FormVariants formVariants = new FormVariants();
+            FormFinding formVariants = new FormFinding();
             formVariants.ShowDialog();
         }
     }

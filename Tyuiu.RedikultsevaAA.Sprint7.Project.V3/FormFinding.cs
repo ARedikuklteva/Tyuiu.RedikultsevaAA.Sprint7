@@ -13,27 +13,25 @@ using Tyuiu.RedikultsevaAA.Sprint7.Project.V3.Lib;
 
 namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
 {
-    public partial class FormVariants : Form
+    public partial class FormFinding : Form
     {
-        public FormVariants()
+        public FormFinding()
         {
             InitializeComponent();
-            openFileDialog_RAA.Filter = "Значения, разделённые запятыми(*.csv)|*csv|Все файлы(*.*)|*.*"; // ?
+            openFileDialog_RAA.Filter = "Значения, разделённые запятыми(*.csv)|*csv|Все файлы(*.*)|*.*";
         }
 
-        public string openFilePath;
+        public static string path;
+        
         DataService ds = new DataService();
-
-        static int columns;
-        static int rows;
-        public string path;
 
         public static string[,] Array(string path)
         {
+            int columns;
+            int rows;
 
             string data = File.ReadAllText(path);
-            data = data.Replace('\n', '\r'); // ?
-            string[] lines = data.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries); // ?
+            string[] lines = data.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
             rows = lines.Length;
             columns = lines[0].Split(';').Length;
 
@@ -49,16 +47,18 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             return matrix;
         }
 
-
         private void buttonReadFile_RAA_Click(object sender, EventArgs e)
         {
             openFileDialog_RAA.ShowDialog();
             path = openFileDialog_RAA.FileName;
 
 
-            string[,] res = Array(path);
+            string[,] matrix = Array(path);
             dataGridView_RAA.Columns.Clear();
             dataGridView_RAA.Rows.Clear();
+
+            int rows = matrix.GetUpperBound(0) + 1;
+            int columns = matrix.Length / rows;
 
             dataGridView_RAA.ColumnCount = columns;
             dataGridView_RAA.RowCount = rows;
@@ -67,13 +67,15 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             {
                 for (int j = 0; j < columns; j++)
                 {
-
-                    dataGridView_RAA.Rows[i].Cells[j].Value = res[i, j];
                     dataGridView_RAA.Columns[j].Width = 200;
-                    dataGridView_RAA.Rows[i].Height = 25;
+                    dataGridView_RAA.Rows[i].Height = 20;
+                    dataGridView_RAA.Rows[i].Cells[j].Value = matrix[i, j];
                 }
             }
-
+            buttonFiltrBySubject_RAA.Enabled = true;
+            buttonFiltrKafedra_RAA.Enabled = true;
+            buttonSaveFile_RAA.Enabled = true;
+            buttonSortAlph_RAA.Enabled = true;
         }
 
         private void buttonSaveFile_RAA_Click(object sender, EventArgs e)
@@ -86,8 +88,8 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             saveFileDialog_RAA.FileName = "Red_University.csv";
             saveFileDialog_RAA.InitialDirectory = Directory.GetCurrentDirectory();
             saveFileDialog_RAA.ShowDialog();
-
-            string path = saveFileDialog_RAA.FileName;
+            
+            path = saveFileDialog_RAA.FileName;
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
@@ -115,21 +117,38 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
                 File.AppendAllText(path, str + Environment.NewLine);
                 str = "";
             }
-            
         }
 
 
-            private void buttonSortAlph_RAA_Click(object sender, EventArgs e)
+        private void buttonSortAlph_RAA_Click(object sender, EventArgs e)
+        {
+            string[,] matrix = ds.SortAlhp(Array(path));
+            dataGridView_RAA.Columns.Clear();
+            dataGridView_RAA.Rows.Clear();
+
+            int rows = matrix.GetUpperBound(0) + 1;
+            int columns = matrix.Length / rows;
+
+            dataGridView_RAA.ColumnCount = columns;
+            dataGridView_RAA.RowCount = rows;
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    dataGridView_RAA.Columns[j].Width = 200;
+                    dataGridView_RAA.Rows[i].Height = 20;
+                    dataGridView_RAA.Rows[i].Cells[j].Value = matrix[i, j];
+                }
+            }
+        }
+
+        private void buttonFiltrKafedra_RAA_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void buttonSortKafedra_RAA_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonSortBySubject_RAA_Click(object sender, EventArgs e)
+        private void buttonFiltrBySubject_RAA_Click(object sender, EventArgs e)
         {
 
         }
