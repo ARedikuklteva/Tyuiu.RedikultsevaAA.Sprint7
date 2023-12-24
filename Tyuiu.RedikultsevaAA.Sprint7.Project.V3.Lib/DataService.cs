@@ -64,5 +64,57 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3.Lib
 
             return matrix;
         }
+
+        public string[,] FiltrKaf(string num, string[,] array)
+        {
+            int rows = array.GetUpperBound(0) + 1;
+            int columns = array.Length / rows;
+            string[,] matrix = new string[rows, columns];
+
+            for(int j = 0; j < columns; j++)
+            {
+                matrix[0, j] = array[0, j];
+            }
+
+            int count = 1;
+            for (int i = 1; i < rows; i++)
+            {
+                if (array[i, 10] == num)
+                {
+                    for (int j = 0; j < columns; j++)
+                    {
+                        matrix[count, j] = array[i, j];
+                    }
+                    count++;
+                }
+            }
+            return matrix;
+        }
+
+        public string[,] FiltrRazd(string num, string[,] array)
+        {
+            int rows = array.GetUpperBound(0) + 1;
+            int columns = array.Length / rows;
+            string[,] matrix = new string[rows, columns];
+
+            for (int j = 0; j < columns; j++)
+            {
+                matrix[0, j] = array[0, j];
+            }
+
+            int count = 1;
+            for (int i = 1; i < rows; i++)
+            {
+                if (array[i, 5] == num)
+                {
+                    for (int j = 0; j < columns; j++)
+                    {
+                        matrix[count, j] = array[i, j];
+                    }
+                    count++;
+                }
+            }
+            return matrix;
+        }
     }
 }

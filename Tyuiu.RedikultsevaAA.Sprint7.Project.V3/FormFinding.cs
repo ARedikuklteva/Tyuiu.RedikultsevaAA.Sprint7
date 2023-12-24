@@ -22,7 +22,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
         }
 
         public static string path;
-        
+
         DataService ds = new DataService();
 
         public static string[,] Array(string path)
@@ -88,7 +88,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             saveFileDialog_RAA.FileName = "Red_University.csv";
             saveFileDialog_RAA.InitialDirectory = Directory.GetCurrentDirectory();
             saveFileDialog_RAA.ShowDialog();
-            
+
             path = saveFileDialog_RAA.FileName;
 
             FileInfo fileInfo = new FileInfo(path);
@@ -145,12 +145,105 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
 
         private void buttonFiltrKafedra_RAA_Click(object sender, EventArgs e)
         {
+            string textKaf = textBoxFiltr_RAA.Text;
+            if (textKaf != null)
+            {
+                string[,] arrayKaf = Array(path);
+                int rowsArrayKaf = arrayKaf.GetUpperBound(0) + 1;
 
+                bool Flag = false;
+
+                for (int i = 0; i < rowsArrayKaf; i++)
+                {
+                    if (arrayKaf[i, 10] == textKaf)
+                    {
+                        Flag = true;
+                    }
+
+                }
+
+                if (Flag == true)
+                {
+                    string[,] matrix = ds.FiltrKaf(textKaf, arrayKaf);
+                    dataGridView_RAA.Columns.Clear();
+                    dataGridView_RAA.Rows.Clear();
+
+                    int rows = matrix.GetUpperBound(0) + 1;
+                    int columns = matrix.Length / rows;
+
+                    dataGridView_RAA.ColumnCount = columns;
+                    dataGridView_RAA.RowCount = rows;
+
+                    for (int i = 0; i < rows; i++)
+                    {
+                        for (int j = 0; j < columns; j++)
+                        {
+                            dataGridView_RAA.Columns[j].Width = 200;
+                            dataGridView_RAA.Rows[i].Height = 20;
+                            dataGridView_RAA.Rows[i].Cells[j].Value = matrix[i, j];
+                        }
+                    }
+                }
+
+                else
+                {
+                    MessageBox.Show("Такого раздела нет в базе данных", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
-        private void buttonFiltrBySubject_RAA_Click(object sender, EventArgs e)
-        {
+            private void buttonFiltrBySubject_RAA_Click(object sender, EventArgs e)
+            {
+                string text = textBoxFiltrRazd_RAA.Text;
+                if (text != null)
+                {
+                    string[,] array = Array(path);
+                    int rowsArray = array.GetUpperBound(0) + 1;
 
+                    bool flag = false;
+
+                    for (int i = 0; i < rowsArray; i++)
+                    {
+                        if (array[i, 5] == text)
+                        {
+                            flag = true;
+                        }
+
+                    }
+
+                    if (flag == true)
+                    {
+                        string[,] matrix = ds.FiltrRazd(text, array);
+                        dataGridView_RAA.Columns.Clear();
+                        dataGridView_RAA.Rows.Clear();
+
+                        int rows = matrix.GetUpperBound(0) + 1;
+                        int columns = matrix.Length / rows;
+
+                        dataGridView_RAA.ColumnCount = columns;
+                        dataGridView_RAA.RowCount = rows;
+
+                        for (int i = 0; i < rows; i++)
+                        {
+                            for (int j = 0; j < columns; j++)
+                            {
+                                dataGridView_RAA.Columns[j].Width = 200;
+                                dataGridView_RAA.Rows[i].Height = 20;
+                                dataGridView_RAA.Rows[i].Cells[j].Value = matrix[i, j];
+                            }
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Такого раздела нет в базе данных", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Введите данные!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
-    }
-}
+    } 
+
