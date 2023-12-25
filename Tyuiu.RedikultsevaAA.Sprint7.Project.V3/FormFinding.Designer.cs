@@ -36,6 +36,9 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.buttonFiltrKafedra_RAA = new System.Windows.Forms.Button();
             this.buttonFiltrBySubject_RAA = new System.Windows.Forms.Button();
             this.buttonSaveFile_RAA = new System.Windows.Forms.Button();
+            this.buttonSearch_RAA = new System.Windows.Forms.Button();
+            this.buttonNewRow_RAA = new System.Windows.Forms.Button();
+            this.buttonStatForm_RAA = new System.Windows.Forms.Button();
             this.dataGridView_RAA = new System.Windows.Forms.DataGridView();
             this.openFileDialog_RAA = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog_RAA = new System.Windows.Forms.SaveFileDialog();
@@ -44,7 +47,6 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.textBoxFiltr_RAA = new System.Windows.Forms.TextBox();
             this.textBoxFiltrRazd_RAA = new System.Windows.Forms.TextBox();
             this.labelFIO_RAA = new System.Windows.Forms.Label();
-            this.buttonSearch_RAA = new System.Windows.Forms.Button();
             this.textBoxSearch_RAA = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_RAA)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +60,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.buttonReadFile_RAA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(130)))));
             this.buttonReadFile_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonReadFile_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.buttonReadFile_RAA.Location = new System.Drawing.Point(27, 12);
+            this.buttonReadFile_RAA.Location = new System.Drawing.Point(28, 12);
             this.buttonReadFile_RAA.Name = "buttonReadFile_RAA";
             this.buttonReadFile_RAA.Size = new System.Drawing.Size(120, 60);
             this.buttonReadFile_RAA.TabIndex = 1;
@@ -73,7 +75,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.buttonSortAlph_RAA.Enabled = false;
             this.buttonSortAlph_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSortAlph_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.buttonSortAlph_RAA.Location = new System.Drawing.Point(27, 124);
+            this.buttonSortAlph_RAA.Location = new System.Drawing.Point(28, 231);
             this.buttonSortAlph_RAA.Name = "buttonSortAlph_RAA";
             this.buttonSortAlph_RAA.Size = new System.Drawing.Size(120, 60);
             this.buttonSortAlph_RAA.TabIndex = 1;
@@ -88,7 +90,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.buttonFiltrKafedra_RAA.Enabled = false;
             this.buttonFiltrKafedra_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFiltrKafedra_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.buttonFiltrKafedra_RAA.Location = new System.Drawing.Point(27, 315);
+            this.buttonFiltrKafedra_RAA.Location = new System.Drawing.Point(27, 384);
             this.buttonFiltrKafedra_RAA.Name = "buttonFiltrKafedra_RAA";
             this.buttonFiltrKafedra_RAA.Size = new System.Drawing.Size(120, 60);
             this.buttonFiltrKafedra_RAA.TabIndex = 1;
@@ -103,7 +105,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.buttonFiltrBySubject_RAA.Enabled = false;
             this.buttonFiltrBySubject_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFiltrBySubject_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.buttonFiltrBySubject_RAA.Location = new System.Drawing.Point(28, 510);
+            this.buttonFiltrBySubject_RAA.Location = new System.Drawing.Point(27, 544);
             this.buttonFiltrBySubject_RAA.Name = "buttonFiltrBySubject_RAA";
             this.buttonFiltrBySubject_RAA.Size = new System.Drawing.Size(120, 60);
             this.buttonFiltrBySubject_RAA.TabIndex = 1;
@@ -127,13 +129,57 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.buttonSaveFile_RAA.UseVisualStyleBackColor = false;
             this.buttonSaveFile_RAA.Click += new System.EventHandler(this.buttonSaveFile_RAA_Click);
             // 
+            // buttonSearch_RAA
+            // 
+            this.buttonSearch_RAA.BackColor = System.Drawing.Color.Bisque;
+            this.buttonSearch_RAA.Enabled = false;
+            this.buttonSearch_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearch_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.buttonSearch_RAA.Location = new System.Drawing.Point(745, 12);
+            this.buttonSearch_RAA.Name = "buttonSearch_RAA";
+            this.buttonSearch_RAA.Size = new System.Drawing.Size(120, 60);
+            this.buttonSearch_RAA.TabIndex = 5;
+            this.buttonSearch_RAA.Text = "Поиск по ФИО";
+            this.toolTip_RAA.SetToolTip(this.buttonSearch_RAA, "Введите полное ФИО преподователя,\r\nчтобы его/её найти");
+            this.buttonSearch_RAA.UseVisualStyleBackColor = false;
+            this.buttonSearch_RAA.Click += new System.EventHandler(this.buttonSearch_RAA_Click);
+            // 
+            // buttonNewRow_RAA
+            // 
+            this.buttonNewRow_RAA.BackColor = System.Drawing.Color.Bisque;
+            this.buttonNewRow_RAA.Enabled = false;
+            this.buttonNewRow_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNewRow_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.buttonNewRow_RAA.Location = new System.Drawing.Point(27, 127);
+            this.buttonNewRow_RAA.Name = "buttonNewRow_RAA";
+            this.buttonNewRow_RAA.Size = new System.Drawing.Size(120, 60);
+            this.buttonNewRow_RAA.TabIndex = 7;
+            this.buttonNewRow_RAA.Text = "Добавить ряд\r\n";
+            this.toolTip_RAA.SetToolTip(this.buttonNewRow_RAA, "Добавляется ряд, в который можно \r\nвнести нового преподователя");
+            this.buttonNewRow_RAA.UseVisualStyleBackColor = false;
+            this.buttonNewRow_RAA.Click += new System.EventHandler(this.buttonNewRow_RAA_Click);
+            // 
+            // buttonStatForm_RAA
+            // 
+            this.buttonStatForm_RAA.BackColor = System.Drawing.Color.Bisque;
+            this.buttonStatForm_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStatForm_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.buttonStatForm_RAA.Location = new System.Drawing.Point(252, 12);
+            this.buttonStatForm_RAA.Name = "buttonStatForm_RAA";
+            this.buttonStatForm_RAA.Size = new System.Drawing.Size(120, 60);
+            this.buttonStatForm_RAA.TabIndex = 7;
+            this.buttonStatForm_RAA.Text = "Переход на другую форму";
+            this.toolTip_RAA.SetToolTip(this.buttonStatForm_RAA, "Переход на форму с суммой и графиком");
+            this.buttonStatForm_RAA.UseVisualStyleBackColor = false;
+            this.buttonStatForm_RAA.Click += new System.EventHandler(this.buttonStatForm_RAA_Click);
+            // 
             // dataGridView_RAA
             // 
             this.dataGridView_RAA.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(130)))));
             this.dataGridView_RAA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_RAA.ColumnHeadersVisible = false;
             this.dataGridView_RAA.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(130)))));
-            this.dataGridView_RAA.Location = new System.Drawing.Point(185, 98);
+            this.dataGridView_RAA.Location = new System.Drawing.Point(184, 99);
             this.dataGridView_RAA.Name = "dataGridView_RAA";
             this.dataGridView_RAA.RowHeadersVisible = false;
             this.dataGridView_RAA.RowHeadersWidth = 51;
@@ -149,7 +195,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             // 
             this.labelFiltrKaf_RAA.AutoSize = true;
             this.labelFiltrKaf_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.labelFiltrKaf_RAA.Location = new System.Drawing.Point(26, 250);
+            this.labelFiltrKaf_RAA.Location = new System.Drawing.Point(26, 319);
             this.labelFiltrKaf_RAA.Name = "labelFiltrKaf_RAA";
             this.labelFiltrKaf_RAA.Size = new System.Drawing.Size(133, 34);
             this.labelFiltrKaf_RAA.TabIndex = 2;
@@ -159,7 +205,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             // 
             this.labelFiltrRazd_RAA.AutoSize = true;
             this.labelFiltrRazd_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.labelFiltrRazd_RAA.Location = new System.Drawing.Point(24, 445);
+            this.labelFiltrRazd_RAA.Location = new System.Drawing.Point(23, 479);
             this.labelFiltrRazd_RAA.Name = "labelFiltrRazd_RAA";
             this.labelFiltrRazd_RAA.Size = new System.Drawing.Size(129, 34);
             this.labelFiltrRazd_RAA.TabIndex = 2;
@@ -170,7 +216,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.textBoxFiltr_RAA.BackColor = System.Drawing.Color.White;
             this.textBoxFiltr_RAA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxFiltr_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.textBoxFiltr_RAA.Location = new System.Drawing.Point(27, 287);
+            this.textBoxFiltr_RAA.Location = new System.Drawing.Point(27, 356);
             this.textBoxFiltr_RAA.Name = "textBoxFiltr_RAA";
             this.textBoxFiltr_RAA.Size = new System.Drawing.Size(120, 22);
             this.textBoxFiltr_RAA.TabIndex = 3;
@@ -180,7 +226,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.textBoxFiltrRazd_RAA.BackColor = System.Drawing.Color.White;
             this.textBoxFiltrRazd_RAA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxFiltrRazd_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.textBoxFiltrRazd_RAA.Location = new System.Drawing.Point(29, 482);
+            this.textBoxFiltrRazd_RAA.Location = new System.Drawing.Point(28, 516);
             this.textBoxFiltrRazd_RAA.Name = "textBoxFiltrRazd_RAA";
             this.textBoxFiltrRazd_RAA.Size = new System.Drawing.Size(120, 22);
             this.textBoxFiltrRazd_RAA.TabIndex = 3;
@@ -189,30 +235,16 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             // 
             this.labelFIO_RAA.AutoSize = true;
             this.labelFIO_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.labelFIO_RAA.Location = new System.Drawing.Point(377, 9);
+            this.labelFIO_RAA.Location = new System.Drawing.Point(508, 9);
             this.labelFIO_RAA.Name = "labelFIO_RAA";
             this.labelFIO_RAA.Size = new System.Drawing.Size(215, 34);
             this.labelFIO_RAA.TabIndex = 4;
             this.labelFIO_RAA.Text = "Введите ФИО преподователя, \r\n            чтобы его найти";
             // 
-            // buttonSearch_RAA
-            // 
-            this.buttonSearch_RAA.BackColor = System.Drawing.Color.Bisque;
-            this.buttonSearch_RAA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSearch_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.buttonSearch_RAA.Location = new System.Drawing.Point(614, 12);
-            this.buttonSearch_RAA.Name = "buttonSearch_RAA";
-            this.buttonSearch_RAA.Size = new System.Drawing.Size(120, 60);
-            this.buttonSearch_RAA.TabIndex = 5;
-            this.buttonSearch_RAA.Text = "Поиск по ФИО";
-            this.toolTip_RAA.SetToolTip(this.buttonSearch_RAA, "Введите полное ФИО преподователя,\r\nчтобы его/её найти");
-            this.buttonSearch_RAA.UseVisualStyleBackColor = false;
-            this.buttonSearch_RAA.Click += new System.EventHandler(this.buttonSearch_RAA_Click);
-            // 
             // textBoxSearch_RAA
             // 
             this.textBoxSearch_RAA.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.textBoxSearch_RAA.Location = new System.Drawing.Point(357, 50);
+            this.textBoxSearch_RAA.Location = new System.Drawing.Point(488, 50);
             this.textBoxSearch_RAA.Name = "textBoxSearch_RAA";
             this.textBoxSearch_RAA.Size = new System.Drawing.Size(251, 22);
             this.textBoxSearch_RAA.TabIndex = 6;
@@ -223,6 +255,8 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1182, 653);
+            this.Controls.Add(this.buttonStatForm_RAA);
+            this.Controls.Add(this.buttonNewRow_RAA);
             this.Controls.Add(this.textBoxSearch_RAA);
             this.Controls.Add(this.buttonSearch_RAA);
             this.Controls.Add(this.labelFIO_RAA);
@@ -265,5 +299,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
         private System.Windows.Forms.Label labelFIO_RAA;
         private System.Windows.Forms.Button buttonSearch_RAA;
         private System.Windows.Forms.TextBox textBoxSearch_RAA;
+        private System.Windows.Forms.Button buttonNewRow_RAA;
+        private System.Windows.Forms.Button buttonStatForm_RAA;
     }
 }

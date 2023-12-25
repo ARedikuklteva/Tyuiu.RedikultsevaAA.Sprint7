@@ -76,6 +76,8 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
             buttonFiltrKafedra_RAA.Enabled = true;
             buttonSaveFile_RAA.Enabled = true;
             buttonSortAlph_RAA.Enabled = true;
+            buttonNewRow_RAA.Enabled = true;
+            buttonSearch_RAA.Enabled = true;
         }
 
         private void buttonSaveFile_RAA_Click(object sender, EventArgs e)
@@ -265,7 +267,7 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
 
                 }
 
-                if (flag == true)
+                if (flag == true && text != "ФИО")
                 {
                     string[,] matrix = ds.Search(text, array);
                     dataGridView_RAA.Columns.Clear();
@@ -298,6 +300,30 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
                 MessageBox.Show("Введите данные!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void buttonStatForm_RAA_Click(object sender, EventArgs e)
+        {
+            FormStatistic formStatistic = new FormStatistic();
+            formStatistic.ShowDialog();
+        }
+
+        private void buttonNewRow_RAA_Click(object sender, EventArgs e)
+        {
+            dataGridView_RAA.Rows.Add();
+
+            int columns = dataGridView_RAA.ColumnCount;
+            int rows = dataGridView_RAA.RowCount;
+
+            for (int j = 0; j < columns; j++)
+            {
+                dataGridView_RAA.Rows[rows - 2].Cells[j].Value = dataGridView_RAA.Rows[rows - 1].Cells[j].Value;
+            }
+
+            for (int j = 0; j < columns; j++)
+            {
+                dataGridView_RAA.Rows[rows - 1].Cells[j].Value = "";
+            }
+        }
     }
-    } 
+} 
 

@@ -141,5 +141,64 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3.Lib
             }
             return matrix;
         }
+
+        public int[] Count(string[,] array)
+        {
+            int rows = array.GetUpperBound(0) + 1;
+            int columns = array.GetUpperBound(1) + 1;
+            int[] matrix = new int[3];
+            string[] matNames = { "", "", "" };
+
+            int count1 = 0;
+            int count2 = 0;
+            int count3 = 0;
+            for (int i = 1; i < rows; i++)
+            {
+                if (array[i, 10] != matNames[0] && matNames[0] == "")
+                {
+                    matNames[0] = array[i, 10];
+                    count1++;
+                }
+                else
+                {
+                    if (array[i, 10] == matNames[0])
+                    {
+                        count1++;
+                    }
+                }
+
+                if (array[i, 10] != matNames[1] && matNames[1] == "")
+                {
+                    matNames[1] = array[i, 10];
+                    count2++;
+                }
+                else
+                {
+                    if (array[i, 10] == matNames[1])
+                    {
+                        count2++;
+                    }
+                }
+
+                if (array[i, 10] != matNames[2] && matNames[2] == "")
+                {
+                    matNames[2] = array[i, 10];
+                    count3++;
+                }
+                else
+                {
+                    if (array[i, 10] == matNames[2])
+                    {
+                        count3++;
+                    }
+                }
+            }
+
+            matrix[0] = count1;
+            matrix[1] = count2;
+            matrix[2] = count3;
+
+            return matrix;
+        }
     }
 }
