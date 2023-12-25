@@ -26,18 +26,16 @@ namespace Tyuiu.RedikultsevaAA.Sprint7.Project.V3
 
         public static string[,] Array(string path)
         {
-            int columns;
-            int rows;
 
             string data = File.ReadAllText(path);
-            string[] lines = data.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
-            rows = lines.Length;
-            columns = lines[0].Split(';').Length;
+            string[] stroki = data.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            int rows = stroki.Length;
+            int columns = stroki[0].Split(';').Length;
 
             string[,] matrix = new string[rows, columns];
             for (int i = 0; i < rows; i++)
             {
-                string[] strok = lines[i].Split(';');
+                string[] strok = stroki[i].Split(';');
                 for (int j = 0; j < columns; j++)
                 {
                     matrix[i, j] = strok[j];
